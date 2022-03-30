@@ -1,4 +1,9 @@
-HTMLConverter Kata
-==================
+HTML Converter Kata
+===================
 
-Extracted from [Racing Car Katas](https://github.com/emilybache/Racing-Car-Katas)
+Write the unit tests for the UnicodeFileToHtmlTextConverter class. The UnicodeFileToHtmlTextConverter class is designed to reformat a plain text file for display in a browser. 
+
+Acknowledgements
+----------------
+
+This exercise was originally designed by Luca Minudel and is included in his repo [TDDwithMockObjectsAndDesignPrinciples](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples)
