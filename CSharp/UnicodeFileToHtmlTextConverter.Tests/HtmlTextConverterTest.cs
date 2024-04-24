@@ -9,6 +9,13 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
         {
             HtmlTextConverter converter = new HtmlTextConverter("foobar.txt");
             Assert.Equal("fixme", converter.GetFilename());
+        }        
+        
+        [Fact]
+        public void Foobar2()
+        {
+            HtmlPagesConverter converter = new HtmlPagesConverter("foobar.txt");
+            Assert.Equal("fixme", converter.GetFilename());
         }
     }
 }
