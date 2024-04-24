@@ -1,4 +1,4 @@
-package tddmicroexercises.textconvertor;
+package org.sammancoaching;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

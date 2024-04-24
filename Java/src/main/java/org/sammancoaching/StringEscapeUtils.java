@@ -1,4 +1,4 @@
-package tddmicroexercises.textconvertor;
+package org.sammancoaching;
 
 class StringEscapeUtils {
 
