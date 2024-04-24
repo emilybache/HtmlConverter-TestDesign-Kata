@@ -1,4 +1,4 @@
-package tddmicroexercises.textconvertor;
+package org.sammancoaching;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
