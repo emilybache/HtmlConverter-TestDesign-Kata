@@ -4,11 +4,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class HtmlTextConverterTest {
+public class UnicodeFileToHtmlTextConverterTest {
 
     @Test
     public void foo() {
-        HtmlTextConverter converter = new HtmlTextConverter("foo");
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter("foo");
         assertEquals("fixme", converter.getFilename());
     }
 

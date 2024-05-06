@@ -4,11 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class HtmlTextConverter
+public class UnicodeFileToHtmlTextConverter
 {
     private String fullFilenameWithPath;
 
-    public HtmlTextConverter(String fullFilenameWithPath)
+    public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
     {
         this.fullFilenameWithPath = fullFilenameWithPath;
     }
