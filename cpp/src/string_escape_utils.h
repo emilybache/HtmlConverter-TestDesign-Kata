@@ -19,6 +19,10 @@ public:
         output = std::regex_replace(output, std::regex("[']"), "&quot;");
         return output;
     }
+
+    static std::string trim(std::string const& input) {
+         return std::regex_replace(input, std::regex("^ +| +$|( ) +"), "$1");
+    }
 };
 
 #endif //HTMLCONVERTER_STRING_ESCAPE_UTILS_H
