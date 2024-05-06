@@ -1,16 +1,23 @@
+"""
+This is a variant on Luca Minudel's original exercise created by Emily Bache
+"""
 import html as html_converter
 
-class UnicodeFileToHtmlTextConverter:
 
-    def __init__(self, full_filename_with_path):
-        self.full_filename_with_path = full_filename_with_path
+class HtmlConverter:
 
-    def convert_to_html(self):
-        f = open(self.full_filename_with_path, "r")
-        html = ""
-        for line in f:
-            line = line.rstrip()
-            html += html_converter.escape(line, quote=True)
-            html += "<br />"
+    def convert_to_html(self, filename):
+        with open(filename, "r") as f:
+            # bug: should be "<html>"
+            html = "<html<"
+            for line in f:
+                html += "<p>"
+                line = line.rstrip()
+                html += self.escape(line, quote=True)
+                # bug: should be "</p>"
+                html += "<br />"
+            html += "</html>"
+            return html
 
-        return html
+    def escape(self, line, quote):
+        return html_converter.escape(line, quote=quote)

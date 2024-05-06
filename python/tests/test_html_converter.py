@@ -1,8 +1,13 @@
 import pytest
 
-from html_converter import UnicodeFileToHtmlTextConverter
+from html_converter import HtmlConverter
 
 
-def test_html_converter():
-    converter = UnicodeFileToHtmlTextConverter("foo")
-    assert "foo" == converter.full_filename_with_path
+def test_html_converter_uses_valid_html_tags():
+    # TODO: finish this test
+    pass
+
+
+def test_html_converter_uses_valid_paragraph_tags():
+    # TODO: finish this test
+    pass
