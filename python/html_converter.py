@@ -12,7 +12,7 @@ class HtmlConverter:
             html = "<html<"
             for line in f:
                 html += "<p>"
-                line = line.rstrip()
+                line = line.strip()
                 html += self.escape(line, quote=True)
                 # bug: should be "</p>"
                 html += "<br />"
