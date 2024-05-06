@@ -1,10 +1,10 @@
 #include "ApprovalTests.hpp"
 #include "doctest/doctest.h"
-#include "HtmlTextConverter.h"
+#include "UnicodeFileToHtmlTextConverter.h"
 
 
 TEST_CASE ("HtmlTextConverter") {
-    auto converter = new HtmlTextConverter("foo");
+    auto converter = new UnicodeFileToHtmlTextConverter("foo");
     REQUIRE("fixme" == converter->getFilename());
 }
 
