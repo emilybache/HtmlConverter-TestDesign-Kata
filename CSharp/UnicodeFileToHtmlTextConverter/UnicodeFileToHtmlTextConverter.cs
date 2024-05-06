@@ -2,11 +2,11 @@ using System.IO;
 
 namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 {
-    public class HtmlTextConverter
+    public class UnicodeFileToHtmlTextConverter
     {
         private string _fullFilenameWithPath;
 
-        public HtmlTextConverter(string fullFilenameWithPath)
+        public UnicodeFileToHtmlTextConverter(string fullFilenameWithPath)
         {
             _fullFilenameWithPath = fullFilenameWithPath;
         }
@@ -32,18 +32,6 @@ namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 
                 return html;
             }
-        }
-    }
-    class HttpUtility
-    {
-        public static string HtmlEncode(string line)
-        {
-            line = line.Replace("<", "&lt;");
-            line = line.Replace(">", "&gt;");
-            line = line.Replace("&", "&amp;");
-            line = line.Replace("\"", "&quot;");
-            line = line.Replace("\'", "&quot;");
-            return line;
         }
     }
 }
