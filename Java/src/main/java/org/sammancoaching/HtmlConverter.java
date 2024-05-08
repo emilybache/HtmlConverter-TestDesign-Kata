@@ -14,8 +14,7 @@ public class HtmlConverter {
         String line = reader.readLine();
         // bug: should be "<html>"
         var html = new StringBuilder("<html<");
-        while (line != null)
-        {
+        while (line != null) {
             html.append("<p>");
             line = line.trim();
             html.append(escapeHtml(line));
