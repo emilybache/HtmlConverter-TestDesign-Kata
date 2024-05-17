@@ -1,0 +1,5 @@
+This is a test file.
+The intention is to use it for a manual test of HtmlConverter.
+The following lines have some characters that need escaping:
+
+    "This is quoted" & <this has brackets>
