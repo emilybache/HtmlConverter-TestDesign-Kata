@@ -1,12 +1,3 @@
-target/
-
-# Eclipse
-bin/
-.settings/
-.project
-.classpath
-.checkstyle
-
-# IDEA
-.idea
 *.iml
+.idea
+target
