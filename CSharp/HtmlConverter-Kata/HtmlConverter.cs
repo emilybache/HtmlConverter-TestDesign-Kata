@@ -1,7 +1,7 @@
 using System.IO;
 using System.Linq;
 
-namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter;
+namespace HtmlConverterKata;
 
 public class HtmlConverter
 {
@@ -27,4 +27,5 @@ public class HtmlConverter
         }
     }
 
+    
 }

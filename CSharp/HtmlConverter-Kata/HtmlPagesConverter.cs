@@ -1,4 +1,4 @@
-namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter;
+namespace HtmlConverterKata;
 
 using System;
 using System.Collections.Generic;

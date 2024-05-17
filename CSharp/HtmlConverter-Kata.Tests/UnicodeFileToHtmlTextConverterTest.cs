@@ -1,6 +1,6 @@
 
 using Xunit;
-namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
+namespace HtmlConverterKata
 {
     public class UnicodeFileToHtmlTextConverterTest
     {

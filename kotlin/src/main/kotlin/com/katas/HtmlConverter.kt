@@ -23,4 +23,14 @@ class HtmlConverter {
         html.append("</html>")
         return html.toString()
     }
+
+    @kotlin.Throws(IOException::class)
+    fun main(args: Array<String?>) {
+        if (args.size != 1) {
+            System.err.println("Usage: kotlin HtmlConverter <filename>")
+            System.exit(1)
+        }
+        val converter = HtmlConverter()
+        System.out.print(converter.convertToHtml(args[0]))
+    }
 }

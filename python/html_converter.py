@@ -21,3 +21,13 @@ class HtmlConverter:
 
     def escape(self, line, quote):
         return html_converter.escape(line, quote=quote)
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: html_converter.py <filename>")
+        sys.exit(1)
+    filename = sys.argv[1]
+    converter = HtmlConverter()
+    print(converter.convert_to_html(filename))

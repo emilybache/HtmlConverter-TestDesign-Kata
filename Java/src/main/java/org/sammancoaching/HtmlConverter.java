@@ -25,4 +25,13 @@ public class HtmlConverter {
         html.append("</html>");
         return html.toString();
     }
+
+    public static void main(String[] args) throws IOException {
+        if (args.length != 1) {
+            System.err.println("Usage: java HtmlConverter <filename>");
+            System.exit(1);
+        }
+        HtmlConverter converter = new HtmlConverter();
+        System.out.print(converter.convertToHtml(args[0]));
+    }
 }

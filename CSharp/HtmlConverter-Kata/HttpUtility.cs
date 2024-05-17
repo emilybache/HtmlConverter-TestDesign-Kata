@@ -1,4 +1,4 @@
-namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter;
+namespace HtmlConverterKata;
 
 class HttpUtility
 {

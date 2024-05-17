@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDDMicroExercises", "TDDMicroExercises.csproj", "{99C7E4FB-3830-4B16-B622-B185E1D0E42E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlConverter-Kata", "HtmlConverter-Kata\HtmlConverter-Kata.csproj", "{C1D1C119-B0ED-4103-AF14-4706F590DF52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlConverter-Kata.Tests", "HtmlConverter-Kata.Tests\HtmlConverter-Kata.Tests.csproj", "{124C59D8-A449-4124-9B39-8922CB259543}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{99C7E4FB-3830-4B16-B622-B185E1D0E42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99C7E4FB-3830-4B16-B622-B185E1D0E42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99C7E4FB-3830-4B16-B622-B185E1D0E42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99C7E4FB-3830-4B16-B622-B185E1D0E42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D1C119-B0ED-4103-AF14-4706F590DF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D1C119-B0ED-4103-AF14-4706F590DF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D1C119-B0ED-4103-AF14-4706F590DF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D1C119-B0ED-4103-AF14-4706F590DF52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{124C59D8-A449-4124-9B39-8922CB259543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{124C59D8-A449-4124-9B39-8922CB259543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{124C59D8-A449-4124-9B39-8922CB259543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{124C59D8-A449-4124-9B39-8922CB259543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

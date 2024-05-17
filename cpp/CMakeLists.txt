@@ -4,6 +4,8 @@ project(HtmlConverter VERSION 1.0
         DESCRIPTION "see readme."
         LANGUAGES CXX)
 
+set(CMAKE_CXX_STANDARD 11)
+
 # uncomment these lines to enable coverage measurements using gcov
 #set(CMAKE_CXX_FLAGS "--coverage")
 
