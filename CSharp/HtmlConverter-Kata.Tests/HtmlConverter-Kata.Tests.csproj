@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\HtmlConverter-Kata\HtmlConverter-Kata.csproj" />
+    </ItemGroup>
+
 </Project>
