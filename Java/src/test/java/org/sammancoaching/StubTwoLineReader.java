@@ -4,23 +4,21 @@ import java.io.IOException;
 import java.io.Reader;
 
 public class StubTwoLineReader extends Reader {
-    private int counter = 0;
+    private int counter = -1;
 
     @Override
     public int read(char[] cbuf, int off, int len) throws IOException {
+        counter++;
         var charCount = 0;
         if (counter == 0) {
             var text = "first line\n";
             charCount = fillBuffer(cbuf, off, len, text);
-            counter++;
         }
         else if (counter == 1){
             var text = "  second line  \n";
             charCount = fillBuffer(cbuf, off, len, text);
-            counter++;
         }
         else if (counter >= 2){
-            counter++;
             return -1;
         }
         return charCount;
@@ -39,6 +37,5 @@ public class StubTwoLineReader extends Reader {
 
     @Override
     public void close() throws IOException {
-
     }
 }
