@@ -1,6 +1,3 @@
-"""
-This is a variant on Luca Minudel's original exercise created by Emily Bache
-"""
 import html as html_converter
 
 
