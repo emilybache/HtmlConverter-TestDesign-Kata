@@ -1,17 +1,19 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
-// 
-// Swift Argument Parser
-// https://swiftpackageindex.com/apple/swift-argument-parser/documentation
+import Foundation
 
-import ArgumentParser
+class HtmlConverter {
+    func convertToHtml(_ fileName: String) throws -> String {
+        let content = try String(contentsOfFile: fileName, encoding: .utf8)
+        let lines = content.components(separatedBy: .newlines)
 
-@main
-struct HtmlConverter: ParsableCommand {
-    @Argument(help: "The file to convert")
-    var fileName: String
-
-    mutating func run() throws {
-        print(fileName)
+        // bug: should be "<html>"
+        var html = "<html<"
+        for line in lines {
+            html += "<p>"
+            html += HttpUtility.htmlEncode(line.trimmingCharacters(in: .whitespaces))
+            // bug: should be "</p>"
+            html += "<br />"
+        }
+        html += "</html>"
+        return html
     }
 }
