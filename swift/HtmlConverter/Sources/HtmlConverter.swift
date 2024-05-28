@@ -8,8 +8,10 @@ import ArgumentParser
 
 @main
 struct HtmlConverter: ParsableCommand {
+    @Argument(help: "The file to convert")
+    var fileName: String
 
     mutating func run() throws {
-        print("Hello, world!")
+        print(fileName)
     }
 }
