@@ -31,9 +31,10 @@ public class HtmlPagesConverter {
 
         var offset = 0
         for line in lines {
-            offset += lines.count
+            offset += line.count
+
             // Skip lines until we're at the page's first line index
-            guard offset < pageBreak else { continue }
+            guard offset >= pageBreak else { continue }
 
             if line.contains("PAGE_BREAK") {
                 break

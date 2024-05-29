@@ -1,0 +1,17 @@
+This is a test file.
+The intention is to use it for a manual test of HtmlPageConverter.
+The following lines have some characters that need escaping:
+
+    "This is quoted" & <this has brackets>
+PAGE_BREAK
+This is a new page.
+The new page intention is to ensure that page selection works.
+The following lines have some characters that need escaping:
+
+    "This is quoted" & <this has brackets>
+PAGE_BREAK
+This is the last page.
+This page is simply here to ensure HtmlPageConverter handles more than 2 pages.
+The following lines have some characters that need escaping:
+
+    "This is quoted" & <this has brackets>
