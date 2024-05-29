@@ -1,14 +1,12 @@
 import Foundation
 
-class UnicodeFileToHtmlTextConverter {
+public class UnicodeFileToHtmlTextConverter {
     private let _fullFilenameWithPath: String
 
-    init(fullFilenameWithPath: String) {
+    public var fileName: String { _fullFilenameWithPath }
+    
+    public init(_ fullFilenameWithPath: String) {
         self._fullFilenameWithPath = fullFilenameWithPath
-    }
-
-    func getFileName() -> String {
-        _fullFilenameWithPath
     }
 
     func convertToHtml() throws -> String {

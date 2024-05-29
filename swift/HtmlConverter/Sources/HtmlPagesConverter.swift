@@ -1,11 +1,13 @@
 import Foundation
 
-class HtmlPagesConverter {
-    private var fileName: String
+public class HtmlPagesConverter {
+    private var _fileName: String
     private var breaks: [Int] = []
 
-    init(fileName: String) throws {
-        self.fileName = fileName
+    public var fileName: String { _fileName }
+    
+    public init(fileName: String) throws {
+        self._fileName = fileName
 
         breaks.append(0)
         let content = try String(contentsOfFile: fileName, encoding: .utf8)
@@ -22,7 +24,7 @@ class HtmlPagesConverter {
     }
 
     func getHtmlPage(_ page: Int) throws -> String {
-        let content = try String(contentsOfFile: fileName, encoding: .utf8)
+        let content = try String(contentsOfFile: _fileName, encoding: .utf8)
         let lines = content.components(separatedBy: .newlines)
         let pageBreak = breaks[page]
         var htmlPage = ""
