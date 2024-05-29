@@ -4,13 +4,13 @@ public class UnicodeFileToHtmlTextConverter {
     private let _fullFilenameWithPath: String
 
     public var fileName: String { _fullFilenameWithPath }
-    
+
     public init(_ fullFilenameWithPath: String) {
         self._fullFilenameWithPath = fullFilenameWithPath
     }
 
     func convertToHtml() throws -> String {
-        let content = try String(contentsOfFile: _fullFilenameWithPath, encoding: .unicode)
+        let content = try String(contentsOfFile: _fullFilenameWithPath, encoding: .utf8)
         let lines = content.components(separatedBy: .newlines)
 
         var html = ""
