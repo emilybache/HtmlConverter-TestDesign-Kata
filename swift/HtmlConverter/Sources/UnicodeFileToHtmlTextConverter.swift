@@ -10,8 +10,8 @@ public class UnicodeFileToHtmlTextConverter {
     }
 
     func convertToHtml() throws -> String {
-        let content = try String(contentsOfFile: _fullFilenameWithPath, encoding: .utf8)
-        let lines = content.components(separatedBy: .newlines)
+        let lines = AppFileReader(fileName: _fullFilenameWithPath)
+            .readLines()
 
         var html = ""
         for line in lines {

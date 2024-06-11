@@ -1,3 +1,4 @@
+import HtmlConverter
 import XCTest
 
 final class HtmlConverterTests: XCTestCase {
@@ -10,7 +11,7 @@ final class HtmlConverterTests: XCTestCase {
     }
 }
 
-fileprivate class StubTwoLinesFileReader {
+fileprivate class StubTwoLinesFileReader: FileReader {
     func readLines() -> [String] {
         [
             "first line",
@@ -19,7 +20,7 @@ fileprivate class StubTwoLinesFileReader {
     }
 }
 
-fileprivate class EmptyLinesFileReader {
+fileprivate class EmptyLinesFileReader: FileReader {
     func readLines() -> [String] {
         []
     }
