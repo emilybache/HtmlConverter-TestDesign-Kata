@@ -10,7 +10,7 @@ public class UnicodeFileToHtmlTextConverter {
     }
 
     func convertToHtml() throws -> String {
-        let lines = AppFileReader(fileName: _fullFilenameWithPath)
+        let lines = FileReader(fileName: _fullFilenameWithPath)
             .readLines()
 
         var html = ""

@@ -10,7 +10,7 @@ public class HtmlPagesConverter {
         self._fileName = fileName
 
         breaks.append(0)
-        let lines = AppFileReader(fileName: fileName)
+        let lines = FileReader(fileName: fileName)
             .readLines()
 
         var cumulativeCount = 0
@@ -24,7 +24,7 @@ public class HtmlPagesConverter {
     }
 
     func getHtmlPage(_ page: Int) throws -> String {
-        let lines = AppFileReader(fileName: _fileName)
+        let lines = FileReader(fileName: _fileName)
             .readLines()
         let pageBreak = breaks[page]
         var htmlPage = ""

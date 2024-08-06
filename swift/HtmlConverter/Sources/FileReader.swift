@@ -1,6 +1,6 @@
 import Foundation
 
-public class AppFileReader {
+public class FileReader {
     let fileName: String
 
     public init(fileName: String) {
