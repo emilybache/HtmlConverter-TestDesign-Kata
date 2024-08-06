@@ -10,18 +10,3 @@ final class HtmlConverterTests: XCTestCase {
         // TODO: write this test
     }
 }
-
-fileprivate class StubTwoLinesFileReader: FileReader {
-    func readLines() -> [String] {
-        [
-            "first line",
-            "    second line"
-        ]
-    }
-}
-
-fileprivate class EmptyLinesFileReader: FileReader {
-    func readLines() -> [String] {
-        []
-    }
-}

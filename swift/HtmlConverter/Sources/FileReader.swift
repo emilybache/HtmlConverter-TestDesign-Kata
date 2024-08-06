@@ -1,10 +1,6 @@
 import Foundation
 
-public protocol FileReader {
-    func readLines() -> [String]
-}
-
-public class AppFileReader: FileReader {
+public class AppFileReader {
     let fileName: String
 
     public init(fileName: String) {
