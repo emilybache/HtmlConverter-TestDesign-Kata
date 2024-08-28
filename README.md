@@ -1,7 +1,7 @@
 HTML Converter Kata
 ===================
 
-There are several variants of this exercise in this repo. They all present slightly different challenges. You can expect to learn more about test design, SOLID principles and testability by working on them. 
+There are several variants of this exercise in this repo. They all present slightly different challenges. You can expect to learn more about test design, SOLID principles and testability by working on them. There is also a video that explains one way to use this exercise: [The Fake Designer Handbag of Unit Testing](https://youtu.be/m-1eeYq1uMI)
 
 UnicodeFileToHtmlTextConverter
 ------------------------------
