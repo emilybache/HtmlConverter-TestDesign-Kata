@@ -17,6 +17,20 @@ public class HtmlConverterTest
     }
 }
 
+
+class StubEmptyReader : TextReader
+{
+
+    public override string? ReadLine()
+    {
+        return null;
+    }
+    
+    public override void Close()
+    {
+    }
+}
+
 class StubTwoLineReader : TextReader
 {
     private int _counter = -1;
@@ -35,19 +49,6 @@ class StubTwoLineReader : TextReader
         return null;
     }
 
-    public override void Close()
-    {
-    }
-}
-
-class StubEmptyReader : TextReader
-{
-
-    public override string? ReadLine()
-    {
-        return null;
-    }
-    
     public override void Close()
     {
     }

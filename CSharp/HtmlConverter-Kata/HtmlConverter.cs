@@ -10,8 +10,8 @@ public class HtmlConverter
         using (TextReader unicodeFileStream = File.OpenText(filename))
         {
             // bug: should be "<html>"
-            string html = "<html<";
-            string line = unicodeFileStream.ReadLine();
+            var html = "<html<";
+            var line = unicodeFileStream.ReadLine();
             while (line != null)
             {
                 html += "<p>";
