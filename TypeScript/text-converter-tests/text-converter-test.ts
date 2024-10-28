@@ -1,6 +1,7 @@
 import {expect} from 'chai';
+import * as fs from 'fs';
 import 'mocha';
-import UnicodeFileToHtmlTextConverter from '../text-converter/unicode-file-to-html-text-converter';
+import * as rd from 'readline';
 
 describe('Text Converter', () => {
 

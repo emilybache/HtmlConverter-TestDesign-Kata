@@ -6,7 +6,10 @@ export default class HtmlConverter {
 
   public convertToHtml(filename: string): string {
     const reader = rd.createInterface(fs.createReadStream(filename));
+    return this.ConvertToHtml(reader);
+  }
 
+  private ConvertToHtml(reader: rd.ReadLine) {
     // bug: should be '<html>'
     let html = '<html<';
     reader.on("line", (line: string) => {
