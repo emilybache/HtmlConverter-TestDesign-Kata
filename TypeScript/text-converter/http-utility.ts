@@ -1,5 +1,5 @@
 
-function htmlEncode(line: string): string {
+export default function htmlEncode(line: string): string {
   line = line.replace(/</g, "&lt;");
   line = line.replace(/>/g, "&gt;");
   line = line.replace(/&/g, "&amp;");

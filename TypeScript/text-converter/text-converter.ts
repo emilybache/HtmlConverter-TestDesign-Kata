@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import * as rd from 'readline';
+import htmlEncode from "./http-utility";
 
 export default class HtmlConverter {
 
@@ -11,7 +12,7 @@ export default class HtmlConverter {
     reader.on("line", (line: string) => {
       html += '<p>';
       const trimmedLine = line.trim();
-      html += htmlEncode(trimmedLine); // For encoding HTML, you can use a library like 'he' if necessary
+      html += htmlEncode(trimmedLine);
       // bug: should be '</p>'
       html += '<br />';
     });
