@@ -2,8 +2,8 @@ import Foundation
 
 class HtmlConverter {
     func convertToHtml(_ fileName: String) throws -> String {
-        let lines = FileReader(fileName: fileName)
-            .readLines()
+        let lines = try String(contentsOfFile: fileName, encoding: .utf8)
+            .components(separatedBy: .newlines)
 
         // bug: should be "<html>"
         var html = "<html<"
