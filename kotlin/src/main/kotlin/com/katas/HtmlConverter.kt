@@ -3,6 +3,7 @@ package com.katas
 import com.katas.StringEscapeUtils.Companion.escapeHtml
 import java.io.BufferedReader
 import java.io.FileReader
+import java.io.IOException
 
 class HtmlConverter {
 
@@ -25,7 +26,7 @@ class HtmlConverter {
     }
 
     @kotlin.Throws(IOException::class)
-    fun main(args: Array<String?>) {
+    fun main(args: Array<String>) {
         if (args.size != 1) {
             System.err.println("Usage: kotlin HtmlConverter <filename>")
             System.exit(1)
