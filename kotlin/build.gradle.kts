@@ -1,33 +1,23 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
-    kotlin("jvm") version "2.1.21"
+    kotlin("jvm") version "2.2.0"
 }
+
+group = "org.sammancoaching"
+version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-}
-
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.12.2"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    testImplementation("org.assertj:assertj-core:3.27.3")
-    testImplementation("io.mockk:mockk:1.14.2")
+    testImplementation(kotlin("test"))
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.4.0")
+    testImplementation("com.approvaltests:approvaltests:25.4.3")
 }
 
-tasks {
-    test {
-        useJUnitPlatform()
-    }
-
-    withType<KotlinCompile>().configureEach {
-        compilerOptions.jvmTarget = JvmTarget.JVM_21
-    }
+tasks.test {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(22)
 }

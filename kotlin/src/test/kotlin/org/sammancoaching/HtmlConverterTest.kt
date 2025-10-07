@@ -1,4 +1,4 @@
-package com.katas
+package org.sammancoaching
 
 import org.junit.jupiter.api.Test
 
