@@ -1,13 +1,17 @@
-package com.katas
+package org.sammancoaching
 
-import com.katas.StringEscapeUtils.Companion.escapeHtml
 import java.io.BufferedReader
 import java.io.FileReader
+import java.io.Reader
 
 class HtmlConverter {
 
     fun convertToHtml(filename: String): String {
         val fileReader = FileReader(filename)
+        return convertToHtml(fileReader)
+    }
+
+    fun convertToHtml(fileReader: Reader): String {
         val reader = BufferedReader(fileReader)
         var line = reader.readLine()
         // bug: should be "<html>"
@@ -15,7 +19,7 @@ class HtmlConverter {
         while (line != null) {
             html.append("<p>")
             line = line.trim { it <= ' ' }
-            html.append(escapeHtml(line))
+            html.append(StringEscapeUtils.Companion.escapeHtml(line))
             // bug: should be "</p>"
             html.append("<br />")
             line = reader.readLine()
@@ -24,13 +28,12 @@ class HtmlConverter {
         return html.toString()
     }
 
-    @kotlin.Throws(IOException::class)
     fun main(args: Array<String?>) {
         if (args.size != 1) {
             System.err.println("Usage: kotlin HtmlConverter <filename>")
             System.exit(1)
         }
         val converter = HtmlConverter()
-        System.out.print(converter.convertToHtml(args[0]))
+        System.out.print(converter.convertToHtml(args[0]!!))
     }
 }

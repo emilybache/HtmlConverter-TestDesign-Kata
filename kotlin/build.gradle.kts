@@ -1,23 +1,23 @@
 plugins {
-    kotlin("jvm") version "1.9.24"
-    java
+    kotlin("jvm") version "2.2.0"
 }
+
+group = "org.sammancoaching"
+version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.24")
-    testImplementation("org.jetbrains.kotlin:kotlin-test:1.9.24")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.2")
-    testImplementation("org.assertj:assertj-core:3.25.3")
-    testImplementation("org.mockito:mockito-core:5.11.0")
-    testImplementation("org.mockito.kotlin:mockito-kotlin:5.3.1")
+    testImplementation(kotlin("test"))
+    testImplementation("org.mockito.kotlin:mockito-kotlin:5.4.0")
+    testImplementation("com.approvaltests:approvaltests:25.4.3")
 }
-
-java.sourceCompatibility = JavaVersion.VERSION_17
 
 tasks.test {
     useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(22)
 }

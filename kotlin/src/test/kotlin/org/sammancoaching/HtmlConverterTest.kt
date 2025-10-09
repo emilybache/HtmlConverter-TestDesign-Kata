@@ -1,19 +1,45 @@
-package com.katas
+package org.sammancoaching
 
 import org.junit.jupiter.api.Test
 import java.io.Reader
+import java.io.StringReader
+import kotlin.test.assertEquals
 
 
 class HtmlConverterTest {
+
     @Test
     fun `convertToHtml uses valid html tags`() {
-        // TODO: write this test
+        val sr = StringReader("")
+        val converter = HtmlConverter()
+        val result = converter.convertToHtml(sr)
+        assertEquals("<html></html>", result)
+    }
+
+    @Test
+    fun `convertToHtml uses valid html tags with Stub`() {
+        val sr: Reader = StubEmptyReader()
+        val converter = HtmlConverter()
+        val result = converter.convertToHtml(sr)
+        assertEquals("<html></html>", result)
     }
 
     @Test
     fun `convertToHtml uses valid paragraph tags`() {
-        // TODO: write this test
+        val sr: Reader = StringReader("first line\n second line  \n")
+        val converter = HtmlConverter()
+        val result = converter.convertToHtml(sr)
+        assertEquals("<html><p>first line</p><p>second line</p></html>", result)
     }
+
+    @Test
+    fun `convertToHtml uses valid paragraph tags with Stub`() {
+        val sr: Reader = StubTwoLineReader()
+        val converter = HtmlConverter()
+        val result = converter.convertToHtml(sr)
+        assertEquals("<html><p>first line</p><p>second line</p></html>", result)
+    }
+
 }
 
 

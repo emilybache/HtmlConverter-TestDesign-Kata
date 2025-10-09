@@ -1,4 +1,4 @@
-package com.katas
+package org.sammancoaching
 
 class StringEscapeUtils {
     companion object {
