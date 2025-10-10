@@ -1,4 +1,7 @@
 
-*.iml
-.idea
-.DS_Store
+**/*.iml
+**/.idea
+**/*.received.*
+**/DS_Store/*
+**/DS_Store/*
+**/.DS_Store
